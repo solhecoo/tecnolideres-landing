@@ -1,6 +1,19 @@
 /* ====================================
    TECNOLÍDERES - Custom Styles
+   Colores basados en el logo floral
    ==================================== */
+
+/* Color Variables */
+:root {
+    --pink: #EC4899;
+    --purple: #A855F7;
+    --indigo: #6366F1;
+    --blue: #3B82F6;
+    --cyan: #06B6D4;
+    --orange: #F97316;
+    --violet: #A78BFA;
+    --dark: #1E293B;
+}
 
 /* Base Styles */
 * {
@@ -22,12 +35,13 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Hero Pattern Background */
+/* Hero Pattern Background - colores del logo */
 .hero-pattern {
     background-image:
-        radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 40% 80%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
+        radial-gradient(circle at 20% 50%, rgba(236, 72, 153, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(6, 182, 212, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 60% 60%, rgba(249, 115, 22, 0.06) 0%, transparent 40%);
 }
 
 /* Floating Animation */
@@ -120,22 +134,22 @@ body {
     transform: translateY(-5px);
 }
 
-/* Form Styles */
+/* Form Styles - colores del logo */
 input:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.2);
 }
 
 .volunteer-checkbox input:checked + span {
-    color: #3B82F6;
+    color: var(--pink);
     font-weight: 500;
 }
 
 .volunteer-checkbox:has(input:checked) {
-    border-color: #3B82F6;
-    background-color: rgba(59, 130, 246, 0.05);
+    border-color: var(--pink);
+    background-color: rgba(236, 72, 153, 0.05);
 }
 
 /* Counter Animation */
@@ -202,14 +216,15 @@ textarea:focus {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Section Divider */
+/* Section Divider - colores del logo */
 .section-divider {
     height: 1px;
     background: linear-gradient(
         90deg,
         transparent,
-        rgba(59, 130, 246, 0.3),
-        rgba(139, 92, 246, 0.3),
+        rgba(236, 72, 153, 0.3),
+        rgba(168, 85, 247, 0.3),
+        rgba(6, 182, 212, 0.3),
         transparent
     );
 }
@@ -223,7 +238,7 @@ textarea:focus {
     transform: scale(1.1) rotate(5deg);
 }
 
-/* Link Underline Animation */
+/* Link Underline Animation - colores del logo */
 .link-underline {
     position: relative;
 }
@@ -235,7 +250,7 @@ textarea:focus {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+    background: linear-gradient(90deg, var(--pink), var(--purple), var(--cyan));
     transition: width 0.3s ease;
 }
 
@@ -257,7 +272,7 @@ textarea:focus {
     animation: pulse-soft 2s ease-in-out infinite;
 }
 
-/* Gradient Border Animation */
+/* Gradient Border Animation - colores del logo */
 .gradient-border {
     position: relative;
     background: white;
@@ -267,7 +282,7 @@ textarea:focus {
     content: '';
     position: absolute;
     inset: -2px;
-    background: linear-gradient(45deg, #3B82F6, #8B5CF6, #06B6D4, #F97316);
+    background: linear-gradient(45deg, var(--pink), var(--purple), var(--cyan), var(--orange));
     border-radius: inherit;
     z-index: -1;
     background-size: 300% 300%;
@@ -303,7 +318,7 @@ textarea:focus {
     }
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar - colores del logo */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -313,23 +328,23 @@ textarea:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #3B82F6, #8B5CF6);
+    background: linear-gradient(180deg, var(--pink), var(--purple));
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #2563EB, #7C3AED);
+    background: linear-gradient(180deg, var(--purple), var(--indigo));
 }
 
 /* Selection Styles */
 ::selection {
-    background: rgba(59, 130, 246, 0.3);
-    color: #1F2937;
+    background: rgba(236, 72, 153, 0.3);
+    color: var(--dark);
 }
 
 /* Focus Visible Styles */
 :focus-visible {
-    outline: 2px solid #3B82F6;
+    outline: 2px solid var(--pink);
     outline-offset: 2px;
 }
 

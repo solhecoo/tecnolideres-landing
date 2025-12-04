@@ -50,11 +50,17 @@
             theme: {
                 extend: {
                     colors: {
-                        'electric-blue': '#3B82F6',
-                        'vibrant-purple': '#8B5CF6',
-                        'bright-cyan': '#06B6D4',
-                        'energy-orange': '#F97316',
-                        'dark-gray': '#1F2937',
+                        // Colores principales del logo
+                        'pink': '#EC4899',
+                        'purple': '#A855F7',
+                        'indigo': '#6366F1',
+                        'blue': '#3B82F6',
+                        'cyan': '#06B6D4',
+                        'orange': '#F97316',
+                        'violet': '#A78BFA',
+                        // Colores de texto
+                        'dark': '#1E293B',
+                        'gray': '#64748B',
                     }
                 }
             }
@@ -72,7 +78,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="font-['Inter'] text-dark-gray bg-white">
+<body class="font-['Inter'] text-dark bg-white">
 
     <!-- Header -->
     <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
@@ -85,11 +91,11 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#inicio" class="text-dark-gray hover:text-electric-blue transition-colors font-medium">Inicio</a>
-                    <a href="#nosotros" class="text-dark-gray hover:text-electric-blue transition-colors font-medium">Nosotros</a>
-                    <a href="#como-ayudar" class="text-dark-gray hover:text-electric-blue transition-colors font-medium">Cómo Ayudar</a>
-                    <a href="#impacto" class="text-dark-gray hover:text-electric-blue transition-colors font-medium">Impacto</a>
-                    <a href="#contacto" class="bg-gradient-to-r from-electric-blue to-vibrant-purple text-white px-6 py-2.5 rounded-full font-semibold hover:shadow-lg hover:shadow-electric-blue/30 transition-all duration-300 transform hover:scale-105">
+                    <a href="#inicio" class="text-dark hover:text-pink transition-colors font-medium">Inicio</a>
+                    <a href="#nosotros" class="text-dark hover:text-purple transition-colors font-medium">Nosotros</a>
+                    <a href="#como-ayudar" class="text-dark hover:text-cyan transition-colors font-medium">Cómo Ayudar</a>
+                    <a href="#impacto" class="text-dark hover:text-orange transition-colors font-medium">Impacto</a>
+                    <a href="#contacto" class="bg-gradient-to-r from-pink via-purple to-indigo text-white px-6 py-2.5 rounded-full font-semibold hover:shadow-lg hover:shadow-pink/30 transition-all duration-300 transform hover:scale-105">
                         Únete
                     </a>
                 </div>
@@ -105,11 +111,11 @@
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden pb-4">
                 <div class="flex flex-col space-y-4">
-                    <a href="#inicio" class="text-dark-gray hover:text-electric-blue transition-colors font-medium">Inicio</a>
-                    <a href="#nosotros" class="text-dark-gray hover:text-electric-blue transition-colors font-medium">Nosotros</a>
-                    <a href="#como-ayudar" class="text-dark-gray hover:text-electric-blue transition-colors font-medium">Cómo Ayudar</a>
-                    <a href="#impacto" class="text-dark-gray hover:text-electric-blue transition-colors font-medium">Impacto</a>
-                    <a href="#contacto" class="bg-gradient-to-r from-electric-blue to-vibrant-purple text-white px-6 py-2.5 rounded-full font-semibold text-center">
+                    <a href="#inicio" class="text-dark hover:text-pink transition-colors font-medium">Inicio</a>
+                    <a href="#nosotros" class="text-dark hover:text-purple transition-colors font-medium">Nosotros</a>
+                    <a href="#como-ayudar" class="text-dark hover:text-cyan transition-colors font-medium">Cómo Ayudar</a>
+                    <a href="#impacto" class="text-dark hover:text-orange transition-colors font-medium">Impacto</a>
+                    <a href="#contacto" class="bg-gradient-to-r from-pink via-purple to-indigo text-white px-6 py-2.5 rounded-full font-semibold text-center">
                         Únete
                     </a>
                 </div>
@@ -120,26 +126,28 @@
     <!-- Hero Section -->
     <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden">
         <!-- Animated Background -->
-        <div class="absolute inset-0 bg-gradient-to-br from-electric-blue via-vibrant-purple to-bright-cyan opacity-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-pink via-purple to-cyan opacity-10"></div>
         <div class="absolute inset-0 hero-pattern"></div>
 
-        <!-- Floating Elements -->
-        <div class="absolute top-20 left-10 w-20 h-20 bg-electric-blue/20 rounded-full blur-xl floating-slow"></div>
-        <div class="absolute bottom-40 right-20 w-32 h-32 bg-vibrant-purple/20 rounded-full blur-xl floating"></div>
-        <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-bright-cyan/20 rounded-full blur-xl floating-fast"></div>
+        <!-- Floating Elements - colores del logo -->
+        <div class="absolute top-20 left-10 w-20 h-20 bg-pink/20 rounded-full blur-xl floating-slow"></div>
+        <div class="absolute bottom-40 right-20 w-32 h-32 bg-purple/20 rounded-full blur-xl floating"></div>
+        <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-cyan/20 rounded-full blur-xl floating-fast"></div>
+        <div class="absolute top-1/2 left-1/4 w-24 h-24 bg-orange/15 rounded-full blur-xl floating"></div>
+        <div class="absolute bottom-20 left-1/3 w-16 h-16 bg-indigo/20 rounded-full blur-xl floating-slow"></div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
             <div class="text-center">
                 <!-- Badge -->
-                <div data-aos="fade-down" data-aos-delay="100" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-electric-blue/10 to-vibrant-purple/10 rounded-full mb-8 border border-electric-blue/20">
-                    <span class="w-2 h-2 bg-energy-orange rounded-full mr-2 animate-pulse"></span>
-                    <span class="text-sm font-medium text-dark-gray">Transformando vidas a través de la tecnología</span>
+                <div data-aos="fade-down" data-aos-delay="100" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-pink/10 to-purple/10 rounded-full mb-8 border border-pink/20">
+                    <span class="w-2 h-2 bg-orange rounded-full mr-2 animate-pulse"></span>
+                    <span class="text-sm font-medium text-dark">Transformando vidas a través de la tecnología</span>
                 </div>
 
                 <!-- Main Headline -->
                 <h1 data-aos="fade-up" data-aos-delay="200" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-['Space_Grotesk'] leading-tight mb-6">
                     Inspiramos la próxima<br>
-                    <span class="bg-gradient-to-r from-electric-blue via-vibrant-purple to-bright-cyan bg-clip-text text-transparent">generación de líderes</span><br>
+                    <span class="bg-gradient-to-r from-pink via-purple to-cyan bg-clip-text text-transparent">generación de líderes</span><br>
                     tecnológicos
                 </h1>
 
@@ -150,13 +158,13 @@
 
                 <!-- CTA Buttons -->
                 <div data-aos="fade-up" data-aos-delay="400" class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-                    <a href="#contacto" class="group bg-gradient-to-r from-electric-blue to-vibrant-purple text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl hover:shadow-electric-blue/30 transition-all duration-300 transform hover:scale-105 flex items-center">
+                    <a href="#contacto" class="group bg-gradient-to-r from-pink via-purple to-indigo text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl hover:shadow-pink/30 transition-all duration-300 transform hover:scale-105 flex items-center">
                         Quiero ser parte del cambio
                         <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                         </svg>
                     </a>
-                    <a href="#nosotros" class="px-8 py-4 rounded-full font-semibold text-lg border-2 border-dark-gray/20 hover:border-electric-blue hover:text-electric-blue transition-all duration-300">
+                    <a href="#nosotros" class="px-8 py-4 rounded-full font-semibold text-lg border-2 border-dark/20 hover:border-purple hover:text-purple transition-all duration-300">
                         Conoce más
                     </a>
                 </div>
@@ -164,19 +172,19 @@
                 <!-- Stats -->
                 <div data-aos="fade-up" data-aos-delay="500" class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                     <div class="text-center">
-                        <div class="text-3xl sm:text-4xl font-bold font-['Space_Grotesk'] bg-gradient-to-r from-electric-blue to-vibrant-purple bg-clip-text text-transparent counter" data-target="500">0</div>
+                        <div class="text-3xl sm:text-4xl font-bold font-['Space_Grotesk'] bg-gradient-to-r from-pink to-purple bg-clip-text text-transparent counter" data-target="500">0</div>
                         <div class="text-gray-500 text-sm mt-1">Jóvenes impactados</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-3xl sm:text-4xl font-bold font-['Space_Grotesk'] bg-gradient-to-r from-vibrant-purple to-bright-cyan bg-clip-text text-transparent counter" data-target="50">0</div>
+                        <div class="text-3xl sm:text-4xl font-bold font-['Space_Grotesk'] bg-gradient-to-r from-purple to-indigo bg-clip-text text-transparent counter" data-target="50">0</div>
                         <div class="text-gray-500 text-sm mt-1">Mentores activos</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-3xl sm:text-4xl font-bold font-['Space_Grotesk'] bg-gradient-to-r from-bright-cyan to-energy-orange bg-clip-text text-transparent counter" data-target="30">0</div>
+                        <div class="text-3xl sm:text-4xl font-bold font-['Space_Grotesk'] bg-gradient-to-r from-cyan to-blue bg-clip-text text-transparent counter" data-target="30">0</div>
                         <div class="text-gray-500 text-sm mt-1">Eventos realizados</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-3xl sm:text-4xl font-bold font-['Space_Grotesk'] bg-gradient-to-r from-energy-orange to-electric-blue bg-clip-text text-transparent counter" data-target="15">0</div>
+                        <div class="text-3xl sm:text-4xl font-bold font-['Space_Grotesk'] bg-gradient-to-r from-orange to-pink bg-clip-text text-transparent counter" data-target="15">0</div>
                         <div class="text-gray-500 text-sm mt-1">Aliados estratégicos</div>
                     </div>
                 </div>
@@ -185,8 +193,8 @@
 
         <!-- Scroll Indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-            <div class="w-6 h-10 border-2 border-dark-gray/30 rounded-full flex justify-center pt-2">
-                <div class="w-1.5 h-3 bg-electric-blue rounded-full animate-bounce"></div>
+            <div class="w-6 h-10 border-2 border-dark/30 rounded-full flex justify-center pt-2">
+                <div class="w-1.5 h-3 bg-pink rounded-full animate-bounce"></div>
             </div>
         </div>
     </section>
@@ -231,31 +239,31 @@
 
                 <!-- Solution -->
                 <div data-aos="fade-left">
-                    <div class="inline-flex items-center px-4 py-2 bg-green-100 rounded-full mb-6">
-                        <span class="text-green-600 font-semibold text-sm">La Solución</span>
+                    <div class="inline-flex items-center px-4 py-2 bg-cyan/10 rounded-full mb-6">
+                        <span class="text-cyan font-semibold text-sm">La Solución</span>
                     </div>
                     <h2 class="text-3xl sm:text-4xl font-bold font-['Space_Grotesk'] mb-6">
                         Tecnolíderes crea puentes<br>
-                        <span class="bg-gradient-to-r from-electric-blue to-vibrant-purple bg-clip-text text-transparent">hacia el futuro</span>
+                        <span class="bg-gradient-to-r from-pink via-purple to-cyan bg-clip-text text-transparent">hacia el futuro</span>
                     </h2>
                     <p class="text-gray-600 text-lg leading-relaxed mb-6">
                         Conectamos profesionales apasionados con jóvenes curiosos. A través de mentorías personalizadas y eventos inspiradores, abrimos puertas hacia un futuro lleno de posibilidades.
                     </p>
                     <ul class="space-y-3">
                         <li class="flex items-center text-gray-600">
-                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 text-cyan mr-3" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                             </svg>
                             Mentorías 1 a 1 con profesionales de la industria
                         </li>
                         <li class="flex items-center text-gray-600">
-                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 text-cyan mr-3" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                             </svg>
                             Workshops y eventos prácticos de tecnología
                         </li>
                         <li class="flex items-center text-gray-600">
-                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 text-cyan mr-3" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                             </svg>
                             Becas y oportunidades de desarrollo
@@ -271,8 +279,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Section Header -->
             <div class="text-center mb-16">
-                <div data-aos="fade-up" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-electric-blue/10 to-vibrant-purple/10 rounded-full mb-6 border border-electric-blue/20">
-                    <span class="text-electric-blue font-semibold text-sm">Múltiples formas de participar</span>
+                <div data-aos="fade-up" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-pink/10 to-purple/10 rounded-full mb-6 border border-pink/20">
+                    <span class="text-pink font-semibold text-sm">Múltiples formas de participar</span>
                 </div>
                 <h2 data-aos="fade-up" data-aos-delay="100" class="text-3xl sm:text-4xl md:text-5xl font-bold font-['Space_Grotesk'] mb-4">
                     ¿Cómo puedes ayudar?
@@ -285,10 +293,10 @@
             <!-- Cards Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Mentoring Card -->
-                <div data-aos="fade-up" data-aos-delay="100" class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-electric-blue/30 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-electric-blue/10 to-transparent rounded-bl-full"></div>
+                <div data-aos="fade-up" data-aos-delay="100" class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-pink/30 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink/10 to-transparent rounded-bl-full"></div>
                     <div class="relative">
-                        <div class="w-14 h-14 bg-gradient-to-br from-electric-blue to-vibrant-purple rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <div class="w-14 h-14 bg-gradient-to-br from-pink to-purple rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
                             </svg>
@@ -297,19 +305,19 @@
                         <p class="text-gray-600 mb-4">Comparte tu experiencia y conocimiento 1 a 1 con jóvenes curiosos por la tecnología.</p>
                         <ul class="text-sm text-gray-500 space-y-2 mb-6">
                             <li class="flex items-center">
-                                <svg class="w-4 h-4 text-electric-blue mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-4 h-4 text-pink mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                                 2-4 horas al mes
                             </li>
                             <li class="flex items-center">
-                                <svg class="w-4 h-4 text-electric-blue mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-4 h-4 text-pink mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                                 Virtual o presencial
                             </li>
                         </ul>
-                        <a href="#contacto" class="inline-flex items-center text-electric-blue font-semibold group-hover:text-vibrant-purple transition-colors">
+                        <a href="#contacto" class="inline-flex items-center text-pink font-semibold group-hover:text-purple transition-colors">
                             Ser Mentor
                             <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -319,10 +327,10 @@
                 </div>
 
                 <!-- Financial Support Card -->
-                <div data-aos="fade-up" data-aos-delay="200" class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-vibrant-purple/30 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-vibrant-purple/10 to-transparent rounded-bl-full"></div>
+                <div data-aos="fade-up" data-aos-delay="200" class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-purple/30 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple/10 to-transparent rounded-bl-full"></div>
                     <div class="relative">
-                        <div class="w-14 h-14 bg-gradient-to-br from-vibrant-purple to-bright-cyan rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <div class="w-14 h-14 bg-gradient-to-br from-purple to-indigo rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
@@ -331,19 +339,19 @@
                         <p class="text-gray-600 mb-4">Patrocina becas, eventos o materiales educativos para nuestros programas.</p>
                         <ul class="text-sm text-gray-500 space-y-2 mb-6">
                             <li class="flex items-center">
-                                <svg class="w-4 h-4 text-vibrant-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-4 h-4 text-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                                 Donaciones únicas o recurrentes
                             </li>
                             <li class="flex items-center">
-                                <svg class="w-4 h-4 text-vibrant-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-4 h-4 text-purple mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                                 100% transparencia
                             </li>
                         </ul>
-                        <a href="#contacto" class="inline-flex items-center text-vibrant-purple font-semibold group-hover:text-bright-cyan transition-colors">
+                        <a href="#contacto" class="inline-flex items-center text-purple font-semibold group-hover:text-indigo transition-colors">
                             Donar/Patrocinar
                             <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -353,10 +361,10 @@
                 </div>
 
                 <!-- Events Card -->
-                <div data-aos="fade-up" data-aos-delay="300" class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-bright-cyan/30 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-bright-cyan/10 to-transparent rounded-bl-full"></div>
+                <div data-aos="fade-up" data-aos-delay="300" class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-cyan/30 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan/10 to-transparent rounded-bl-full"></div>
                     <div class="relative">
-                        <div class="w-14 h-14 bg-gradient-to-br from-bright-cyan to-energy-orange rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <div class="w-14 h-14 bg-gradient-to-br from-cyan to-blue rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                             </svg>
@@ -365,19 +373,19 @@
                         <p class="text-gray-600 mb-4">Ayuda a organizar workshops, hackatones y charlas inspiracionales.</p>
                         <ul class="text-sm text-gray-500 space-y-2 mb-6">
                             <li class="flex items-center">
-                                <svg class="w-4 h-4 text-bright-cyan mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-4 h-4 text-cyan mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                                 Espacios o logística
                             </li>
                             <li class="flex items-center">
-                                <svg class="w-4 h-4 text-bright-cyan mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-4 h-4 text-cyan mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                                 Speakers o facilitadores
                             </li>
                         </ul>
-                        <a href="#contacto" class="inline-flex items-center text-bright-cyan font-semibold group-hover:text-energy-orange transition-colors">
+                        <a href="#contacto" class="inline-flex items-center text-cyan font-semibold group-hover:text-blue transition-colors">
                             Organizar Evento
                             <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -387,10 +395,10 @@
                 </div>
 
                 <!-- Corporate Card -->
-                <div data-aos="fade-up" data-aos-delay="400" class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-energy-orange/30 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-energy-orange/10 to-transparent rounded-bl-full"></div>
+                <div data-aos="fade-up" data-aos-delay="400" class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-orange/30 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange/10 to-transparent rounded-bl-full"></div>
                     <div class="relative">
-                        <div class="w-14 h-14 bg-gradient-to-br from-energy-orange to-electric-blue rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <div class="w-14 h-14 bg-gradient-to-br from-orange to-pink rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
                             </svg>
@@ -399,19 +407,19 @@
                         <p class="text-gray-600 mb-4">Crea programas de voluntariado corporativo e impacta desde tu organización.</p>
                         <ul class="text-sm text-gray-500 space-y-2 mb-6">
                             <li class="flex items-center">
-                                <svg class="w-4 h-4 text-energy-orange mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-4 h-4 text-orange mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                                 Alianzas estratégicas
                             </li>
                             <li class="flex items-center">
-                                <svg class="w-4 h-4 text-energy-orange mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-4 h-4 text-orange mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                                 RSE con impacto real
                             </li>
                         </ul>
-                        <a href="#contacto" class="inline-flex items-center text-energy-orange font-semibold group-hover:text-electric-blue transition-colors">
+                        <a href="#contacto" class="inline-flex items-center text-orange font-semibold group-hover:text-pink transition-colors">
                             Alianza Empresarial
                             <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -424,7 +432,7 @@
     </section>
 
     <!-- Process Section -->
-    <section class="py-20 md:py-32 bg-gradient-to-br from-dark-gray to-gray-900 text-white">
+    <section class="py-20 md:py-32 bg-gradient-to-br from-dark to-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Section Header -->
             <div class="text-center mb-16">
@@ -439,12 +447,12 @@
             <!-- Timeline -->
             <div class="relative">
                 <!-- Connection Line -->
-                <div class="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-electric-blue via-vibrant-purple to-bright-cyan transform -translate-y-1/2"></div>
+                <div class="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-pink via-purple to-cyan transform -translate-y-1/2"></div>
 
                 <div class="grid md:grid-cols-3 gap-8 relative">
                     <!-- Step 1 -->
                     <div data-aos="fade-up" data-aos-delay="100" class="relative text-center">
-                        <div class="bg-gradient-to-br from-electric-blue to-vibrant-purple w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-electric-blue/30 relative z-10">
+                        <div class="bg-gradient-to-br from-pink to-purple w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-pink/30 relative z-10">
                             <span class="text-3xl font-bold font-['Space_Grotesk']">1</span>
                         </div>
                         <h3 class="text-xl font-bold font-['Space_Grotesk'] mb-3">Llena el formulario</h3>
@@ -453,7 +461,7 @@
 
                     <!-- Step 2 -->
                     <div data-aos="fade-up" data-aos-delay="200" class="relative text-center">
-                        <div class="bg-gradient-to-br from-vibrant-purple to-bright-cyan w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-vibrant-purple/30 relative z-10">
+                        <div class="bg-gradient-to-br from-purple to-indigo w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-purple/30 relative z-10">
                             <span class="text-3xl font-bold font-['Space_Grotesk']">2</span>
                         </div>
                         <h3 class="text-xl font-bold font-['Space_Grotesk'] mb-3">Te contactamos</h3>
@@ -462,7 +470,7 @@
 
                     <!-- Step 3 -->
                     <div data-aos="fade-up" data-aos-delay="300" class="relative text-center">
-                        <div class="bg-gradient-to-br from-bright-cyan to-energy-orange w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-bright-cyan/30 relative z-10">
+                        <div class="bg-gradient-to-br from-cyan to-blue w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-cyan/30 relative z-10">
                             <span class="text-3xl font-bold font-['Space_Grotesk']">3</span>
                         </div>
                         <h3 class="text-xl font-bold font-['Space_Grotesk'] mb-3">¡Comienza a impactar!</h3>
@@ -478,8 +486,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Section Header -->
             <div class="text-center mb-16">
-                <div data-aos="fade-up" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-electric-blue/10 to-vibrant-purple/10 rounded-full mb-6 border border-electric-blue/20">
-                    <span class="text-electric-blue font-semibold text-sm">Historias que inspiran</span>
+                <div data-aos="fade-up" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-pink/10 to-purple/10 rounded-full mb-6 border border-pink/20">
+                    <span class="text-pink font-semibold text-sm">Historias que inspiran</span>
                 </div>
                 <h2 data-aos="fade-up" data-aos-delay="100" class="text-3xl sm:text-4xl md:text-5xl font-bold font-['Space_Grotesk'] mb-4">
                     El impacto de nuestra comunidad
@@ -493,22 +501,22 @@
             <div class="grid md:grid-cols-3 gap-8 mb-16">
                 <!-- Testimonial 1 - Mentor -->
                 <div data-aos="fade-up" data-aos-delay="100" class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 relative">
-                    <div class="absolute -top-4 left-6 bg-gradient-to-r from-electric-blue to-vibrant-purple text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    <div class="absolute -top-4 left-6 bg-gradient-to-r from-pink to-purple text-white text-xs font-semibold px-3 py-1 rounded-full">
                         Mentor
                     </div>
                     <div class="flex items-center mb-4 mt-2">
-                        <div class="w-12 h-12 bg-gradient-to-br from-electric-blue to-vibrant-purple rounded-full flex items-center justify-center text-white font-bold">
-                            MA
+                        <div class="w-12 h-12 bg-gradient-to-br from-pink to-purple rounded-full flex items-center justify-center text-white font-bold">
+                            SH
                         </div>
                         <div class="ml-3">
-                            <h4 class="font-semibold">María Alejandra</h4>
-                            <p class="text-sm text-gray-500">Desarrolladora Senior</p>
+                            <h4 class="font-semibold">Sol Hernández</h4>
+                            <p class="text-sm text-gray-500">Project Manager</p>
                         </div>
                     </div>
                     <p class="text-gray-600 italic">
                         "Ser mentora en Tecnolíderes me ha permitido devolver a la comunidad lo que otros me dieron. Ver cómo los jóvenes descubren su pasión por la tecnología no tiene precio."
                     </p>
-                    <div class="flex mt-4 text-energy-orange">
+                    <div class="flex mt-4 text-orange">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -519,22 +527,22 @@
 
                 <!-- Testimonial 2 - Student -->
                 <div data-aos="fade-up" data-aos-delay="200" class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 relative">
-                    <div class="absolute -top-4 left-6 bg-gradient-to-r from-bright-cyan to-energy-orange text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    <div class="absolute -top-4 left-6 bg-gradient-to-r from-cyan to-blue text-white text-xs font-semibold px-3 py-1 rounded-full">
                         Estudiante
                     </div>
                     <div class="flex items-center mb-4 mt-2">
-                        <div class="w-12 h-12 bg-gradient-to-br from-bright-cyan to-energy-orange rounded-full flex items-center justify-center text-white font-bold">
-                            SC
+                        <div class="w-12 h-12 bg-gradient-to-br from-cyan to-blue rounded-full flex items-center justify-center text-white font-bold">
+                            JU
                         </div>
                         <div class="ml-3">
-                            <h4 class="font-semibold">Santiago C.</h4>
+                            <h4 class="font-semibold">Juliana</h4>
                             <p class="text-sm text-gray-500">15 años</p>
                         </div>
                     </div>
                     <p class="text-gray-600 italic">
                         "Gracias a mi mentor descubrí que quiero ser ingeniero de software. Antes no sabía que existían tantas oportunidades en tecnología. ¡Ahora ya estoy aprendiendo Python!"
                     </p>
-                    <div class="flex mt-4 text-energy-orange">
+                    <div class="flex mt-4 text-orange">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -545,22 +553,22 @@
 
                 <!-- Testimonial 3 - Corporate -->
                 <div data-aos="fade-up" data-aos-delay="300" class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 relative">
-                    <div class="absolute -top-4 left-6 bg-gradient-to-r from-vibrant-purple to-bright-cyan text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    <div class="absolute -top-4 left-6 bg-gradient-to-r from-orange to-pink text-white text-xs font-semibold px-3 py-1 rounded-full">
                         Empresa Aliada
                     </div>
                     <div class="flex items-center mb-4 mt-2">
-                        <div class="w-12 h-12 bg-gradient-to-br from-vibrant-purple to-bright-cyan rounded-full flex items-center justify-center text-white font-bold">
-                            TI
+                        <div class="w-12 h-12 bg-gradient-to-br from-orange to-pink rounded-full flex items-center justify-center text-white font-bold">
+                            IC
                         </div>
                         <div class="ml-3">
-                            <h4 class="font-semibold">TechInnovate</h4>
-                            <p class="text-sm text-gray-500">Empresa de Software</p>
+                            <h4 class="font-semibold">Intechchain</h4>
+                            <p class="text-sm text-gray-500">Empresa de Tecnología</p>
                         </div>
                     </div>
                     <p class="text-gray-600 italic">
                         "Nuestro equipo participa activamente en las mentorías. Es increíble ver cómo nuestros colaboradores crecen enseñando y los jóvenes absorben conocimiento como esponjas."
                     </p>
-                    <div class="flex mt-4 text-energy-orange">
+                    <div class="flex mt-4 text-orange">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -590,12 +598,12 @@
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <!-- Left Content -->
                 <div data-aos="fade-right">
-                    <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-electric-blue/10 to-vibrant-purple/10 rounded-full mb-6 border border-electric-blue/20">
-                        <span class="text-electric-blue font-semibold text-sm">Da el primer paso</span>
+                    <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-pink/10 to-purple/10 rounded-full mb-6 border border-pink/20">
+                        <span class="text-pink font-semibold text-sm">Da el primer paso</span>
                     </div>
                     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold font-['Space_Grotesk'] mb-6">
                         ¿Listo para<br>
-                        <span class="bg-gradient-to-r from-electric-blue to-vibrant-purple bg-clip-text text-transparent">transformar vidas?</span>
+                        <span class="bg-gradient-to-r from-pink via-purple to-cyan bg-clip-text text-transparent">transformar vidas?</span>
                     </h2>
                     <p class="text-gray-600 text-lg mb-8">
                         Completa el formulario y únete a nuestra comunidad de changemakers. Tu experiencia puede ser la chispa que encienda el futuro de un joven líder tecnológico.
@@ -604,7 +612,7 @@
                     <!-- Benefits -->
                     <div class="space-y-4">
                         <div class="flex items-start">
-                            <div class="w-10 h-10 bg-gradient-to-br from-electric-blue to-vibrant-purple rounded-lg flex items-center justify-center flex-shrink-0">
+                            <div class="w-10 h-10 bg-gradient-to-br from-pink to-purple rounded-lg flex items-center justify-center flex-shrink-0">
                                 <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                                 </svg>
@@ -615,7 +623,7 @@
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="w-10 h-10 bg-gradient-to-br from-vibrant-purple to-bright-cyan rounded-lg flex items-center justify-center flex-shrink-0">
+                            <div class="w-10 h-10 bg-gradient-to-br from-purple to-indigo rounded-lg flex items-center justify-center flex-shrink-0">
                                 <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
                                 </svg>
@@ -626,7 +634,7 @@
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="w-10 h-10 bg-gradient-to-br from-bright-cyan to-energy-orange rounded-lg flex items-center justify-center flex-shrink-0">
+                            <div class="w-10 h-10 bg-gradient-to-br from-cyan to-blue rounded-lg flex items-center justify-center flex-shrink-0">
                                 <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                                 </svg>
@@ -647,7 +655,7 @@
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nombre completo *</label>
                                 <input type="text" id="name" name="name" required
-                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-200"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink focus:border-transparent transition-all duration-200"
                                     placeholder="Tu nombre">
                             </div>
 
@@ -655,7 +663,7 @@
                             <div>
                                 <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Correo electrónico *</label>
                                 <input type="email" id="email" name="email" required
-                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-200"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink focus:border-transparent transition-all duration-200"
                                     placeholder="tu@email.com">
                             </div>
 
@@ -663,7 +671,7 @@
                             <div>
                                 <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
                                 <input type="tel" id="phone" name="phone"
-                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-200"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink focus:border-transparent transition-all duration-200"
                                     placeholder="+1 234 567 8900">
                             </div>
 
@@ -671,7 +679,7 @@
                             <div>
                                 <label for="org-type" class="block text-sm font-medium text-gray-700 mb-2">Tipo de organización *</label>
                                 <select id="org-type" name="org-type" required
-                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-200">
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink focus:border-transparent transition-all duration-200">
                                     <option value="">Selecciona una opción</option>
                                     <option value="persona">Persona individual</option>
                                     <option value="empresa">Empresa</option>
@@ -684,20 +692,20 @@
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">¿Cómo te gustaría ayudar? *</label>
                                 <div class="grid grid-cols-2 gap-3">
-                                    <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:border-electric-blue transition-colors volunteer-checkbox">
-                                        <input type="checkbox" name="volunteer-type" value="mentoria" class="w-4 h-4 text-electric-blue focus:ring-electric-blue rounded">
+                                    <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:border-pink transition-colors volunteer-checkbox">
+                                        <input type="checkbox" name="volunteer-type" value="mentoria" class="w-4 h-4 text-electric-blue focus:ring-pink rounded">
                                         <span class="ml-2 text-sm">Mentorías</span>
                                     </label>
-                                    <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:border-electric-blue transition-colors volunteer-checkbox">
-                                        <input type="checkbox" name="volunteer-type" value="financiero" class="w-4 h-4 text-electric-blue focus:ring-electric-blue rounded">
+                                    <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:border-pink transition-colors volunteer-checkbox">
+                                        <input type="checkbox" name="volunteer-type" value="financiero" class="w-4 h-4 text-electric-blue focus:ring-pink rounded">
                                         <span class="ml-2 text-sm">Apoyo financiero</span>
                                     </label>
-                                    <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:border-electric-blue transition-colors volunteer-checkbox">
-                                        <input type="checkbox" name="volunteer-type" value="eventos" class="w-4 h-4 text-electric-blue focus:ring-electric-blue rounded">
+                                    <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:border-pink transition-colors volunteer-checkbox">
+                                        <input type="checkbox" name="volunteer-type" value="eventos" class="w-4 h-4 text-electric-blue focus:ring-pink rounded">
                                         <span class="ml-2 text-sm">Eventos</span>
                                     </label>
-                                    <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:border-electric-blue transition-colors volunteer-checkbox">
-                                        <input type="checkbox" name="volunteer-type" value="alianza" class="w-4 h-4 text-electric-blue focus:ring-electric-blue rounded">
+                                    <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:border-pink transition-colors volunteer-checkbox">
+                                        <input type="checkbox" name="volunteer-type" value="alianza" class="w-4 h-4 text-electric-blue focus:ring-pink rounded">
                                         <span class="ml-2 text-sm">Alianza corporativa</span>
                                     </label>
                                 </div>
@@ -707,13 +715,13 @@
                             <div>
                                 <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Cuéntanos sobre ti</label>
                                 <textarea id="message" name="message" rows="4"
-                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-200 resize-none"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink focus:border-transparent transition-all duration-200 resize-none"
                                     placeholder="¿Por qué te gustaría unirte a Tecnolíderes? ¿Qué experiencia tienes?"></textarea>
                             </div>
 
                             <!-- Submit Button -->
                             <button type="submit" id="submit-btn"
-                                class="w-full bg-gradient-to-r from-electric-blue to-vibrant-purple text-white py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-electric-blue/30 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center">
+                                class="w-full bg-gradient-to-r from-pink via-purple to-indigo text-white py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-pink/30 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center">
                                 <span>Enviar solicitud</span>
                                 <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
@@ -745,7 +753,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark-gray text-white py-16">
+    <footer class="bg-dark text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8 mb-12">
                 <!-- Brand -->
@@ -758,16 +766,16 @@
                     </p>
                     <!-- Social Links -->
                     <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-electric-blue transition-colors">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-pink transition-colors">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-electric-blue transition-colors">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-pink transition-colors">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-electric-blue transition-colors">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-pink transition-colors">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-electric-blue transition-colors">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-pink transition-colors">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                         </a>
                     </div>
