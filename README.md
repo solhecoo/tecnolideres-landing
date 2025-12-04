@@ -2,6 +2,21 @@
 
 Landing page para la comunidad Tecnolíderes, que conecta niños y adolescentes con profesionales de tecnología a través de mentorías y eventos.
 
+[![GitHub Pages](https://img.shields.io/badge/demo-live-brightgreen)](https://solhecoo.github.io/tecnolideres-landing/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
+## Demo
+
+**[Ver sitio en vivo](https://solhecoo.github.io/tecnolideres-landing/)**
+
+## Tecnologías
+
+- **HTML5** - Estructura semántica
+- **Tailwind CSS** (CDN) - Framework de estilos
+- **AOS.js** - Animaciones al scroll
+- **Google Apps Script** - Integración con Google Sheets
+
 ## Estructura del Proyecto
 
 ```
@@ -12,166 +27,173 @@ tecnolideres-landing/
 ├── js/
 │   └── main.js         # JavaScript para interactividad
 ├── assets/
-│   └── images/         # Imágenes (agregar aquí)
-└── README.md           # Este archivo
+│   └── images/         # Imágenes del proyecto
+└── README.md
 ```
 
-## Tecnologías Utilizadas
+## Instalación Local
 
-- **HTML5** - Estructura semántica
-- **Tailwind CSS** (CDN) - Framework de estilos
-- **AOS.js** - Animaciones al scroll
-- **Google Apps Script** - Integración con Google Sheets
+```bash
+# Clonar el repositorio
+git clone https://github.com/solhecoo/tecnolideres-landing.git
+
+# Entrar al directorio
+cd tecnolideres-landing
+
+# Iniciar servidor local
+python3 -m http.server 3000
+
+# Abrir en el navegador
+open http://localhost:3000
+```
+
+---
+
+## Contribuir
+
+¡Gracias por tu interés en contribuir a Tecnolíderes! Todas las contribuciones son bienvenidas.
+
+### Formas de Contribuir
+
+- Reportar bugs
+- Sugerir nuevas funcionalidades
+- Mejorar documentación
+- Enviar pull requests con mejoras
+
+### Guía Rápida
+
+1. **Fork** el repositorio
+2. **Clona** tu fork:
+   ```bash
+   git clone https://github.com/TU_USUARIO/tecnolideres-landing.git
+   ```
+3. **Crea una rama** para tu feature:
+   ```bash
+   git checkout -b feature/mi-nueva-funcionalidad
+   ```
+4. **Realiza tus cambios** y haz commit:
+   ```bash
+   git add .
+   git commit -m "feat: agregar nueva funcionalidad"
+   ```
+5. **Push** a tu fork:
+   ```bash
+   git push origin feature/mi-nueva-funcionalidad
+   ```
+6. Abre un **Pull Request**
+
+### Convención de Commits
+
+Usamos [Conventional Commits](https://www.conventionalcommits.org/):
+
+| Tipo | Descripción |
+|------|-------------|
+| `feat:` | Nueva funcionalidad |
+| `fix:` | Corrección de bug |
+| `docs:` | Cambios en documentación |
+| `style:` | Cambios de formato (no afectan código) |
+| `refactor:` | Refactorización de código |
+| `test:` | Agregar o modificar tests |
+| `chore:` | Tareas de mantenimiento |
+
+**Ejemplos:**
+```bash
+git commit -m "feat: agregar sección de testimonios"
+git commit -m "fix: corregir formulario en móviles"
+git commit -m "docs: actualizar instrucciones de instalación"
+```
+
+### Reportar Bugs
+
+Abre un [Issue](https://github.com/solhecoo/tecnolideres-landing/issues/new) con:
+
+- Descripción clara del problema
+- Pasos para reproducirlo
+- Comportamiento esperado vs actual
+- Capturas de pantalla (si aplica)
+- Navegador y sistema operativo
+
+### Sugerir Funcionalidades
+
+Abre un [Issue](https://github.com/solhecoo/tecnolideres-landing/issues/new) con:
+
+- Descripción de la funcionalidad
+- Caso de uso / problema que resuelve
+- Mockups o ejemplos (opcional)
+
+### Estilo de Código
+
+- Usar **2 espacios** para indentación
+- Nombres de clases en **inglés**
+- Comentarios en **español**
+- Seguir convenciones de Tailwind CSS
+
+### Pull Request Checklist
+
+Antes de enviar tu PR, verifica:
+
+- [ ] El código funciona localmente
+- [ ] Es responsive (funciona en móvil y desktop)
+- [ ] No hay errores en la consola
+- [ ] Los commits siguen la convención
+- [ ] La descripción del PR es clara
+
+---
 
 ## Configuración de Google Sheets
 
-### Paso 1: Crear la hoja de cálculo
+El formulario envía datos a Google Sheets. Para configurarlo:
 
-1. Ve a [Google Sheets](https://sheets.google.com) y crea una nueva hoja
-2. En la primera fila, agrega estos encabezados:
-   - A1: `Timestamp`
-   - B1: `Nombre`
-   - C1: `Email`
-   - D1: `Teléfono`
-   - E1: `Tipo Organización`
-   - F1: `Tipo Voluntariado`
-   - G1: `Mensaje`
+1. Crea una hoja en [Google Sheets](https://sheets.google.com)
+2. Ve a **Extensiones > Apps Script**
+3. Pega el código del script (ver documentación completa)
+4. Despliega como aplicación web
+5. Actualiza la URL en `js/main.js`
 
-### Paso 2: Crear el Apps Script
-
-1. En tu hoja de Google, ve a **Extensiones > Apps Script**
-2. Elimina el código existente y pega lo siguiente:
-
-```javascript
-function doPost(e) {
-  try {
-    const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-    const data = JSON.parse(e.postData.contents);
-
-    sheet.appendRow([
-      data.timestamp,
-      data.name,
-      data.email,
-      data.phone,
-      data.orgType,
-      data.volunteerTypes.join(', '),
-      data.message
-    ]);
-
-    // Enviar email de notificación (opcional)
-    MailApp.sendEmail({
-      to: 'TU_EMAIL@gmail.com',
-      subject: 'Nuevo voluntario - Tecnolíderes',
-      body: `
-        Nuevo registro de voluntario:
-
-        Nombre: ${data.name}
-        Email: ${data.email}
-        Teléfono: ${data.phone}
-        Tipo de Organización: ${data.orgType}
-        Intereses: ${data.volunteerTypes.join(', ')}
-        Mensaje: ${data.message}
-      `
-    });
-
-    return ContentService
-      .createTextOutput(JSON.stringify({ success: true }))
-      .setMimeType(ContentService.MimeType.JSON);
-
-  } catch (error) {
-    return ContentService
-      .createTextOutput(JSON.stringify({ success: false, error: error.message }))
-      .setMimeType(ContentService.MimeType.JSON);
-  }
-}
-```
-
-3. Guarda el proyecto (Ctrl+S)
-4. Haz clic en **Implementar > Nueva implementación**
-5. Selecciona tipo: **Aplicación web**
-6. Configura:
-   - Ejecutar como: **Yo**
-   - Quién tiene acceso: **Cualquier persona**
-7. Haz clic en **Implementar**
-8. Copia la URL del web app
-
-### Paso 3: Conectar con la landing page
-
-1. Abre `js/main.js`
-2. Busca la línea: `const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL';`
-3. Reemplaza `YOUR_GOOGLE_APPS_SCRIPT_URL` con tu URL de Apps Script
-4. Descomenta el bloque de fetch (líneas ~150-160)
-
-## Deploy en GitHub Pages
-
-### Opción 1: Desde la interfaz de GitHub
-
-1. Crea un nuevo repositorio en GitHub llamado `tecnolideres-landing`
-2. Sube todos los archivos del proyecto
-3. Ve a **Settings > Pages**
-4. En "Source", selecciona **Deploy from a branch**
-5. Selecciona la rama `main` y carpeta `/ (root)`
-6. Haz clic en **Save**
-7. Tu sitio estará disponible en: `https://TU_USUARIO.github.io/tecnolideres-landing`
-
-### Opción 2: Desde la terminal
-
-```bash
-# Inicializar repositorio
-cd tecnolideres-landing
-git init
-git add .
-git commit -m "Initial commit - Tecnolíderes landing page"
-
-# Conectar con GitHub
-git remote add origin https://github.com/TU_USUARIO/tecnolideres-landing.git
-git branch -M main
-git push -u origin main
-```
+---
 
 ## Personalización
 
-### Cambiar colores
+### Colores
 
-Los colores están definidos en el `<head>` de `index.html`:
+Modifica en `index.html`:
 
 ```javascript
 tailwind.config = {
     theme: {
         extend: {
             colors: {
-                'electric-blue': '#3B82F6',    // Color primario
-                'vibrant-purple': '#8B5CF6',   // Acentos
-                'bright-cyan': '#06B6D4',      // Highlights
-                'energy-orange': '#F97316',    // CTAs secundarios
-                'dark-gray': '#1F2937',        // Textos
+                'electric-blue': '#3B82F6',
+                'vibrant-purple': '#8B5CF6',
+                'bright-cyan': '#06B6D4',
+                'energy-orange': '#F97316',
+                'dark-gray': '#1F2937',
             }
         }
     }
 }
 ```
 
-### Agregar imágenes
+### Estadísticas
 
-1. Coloca tus imágenes en la carpeta `assets/images/`
-2. Reemplaza los placeholders de logos en la sección de aliados
-3. Agrega fotos reales en los testimonios
-
-### Actualizar estadísticas
-
-Busca en `index.html` los elementos con clase `counter` y modifica el atributo `data-target`:
+Busca los elementos `counter` en `index.html`:
 
 ```html
 <div class="counter" data-target="500">0</div>
 ```
 
-### Cambiar textos
+---
 
-Todos los textos están directamente en `index.html`. Busca y reemplaza según necesites.
+## Licencia
 
-## Soporte
+Este proyecto está bajo la licencia MIT. Ver [LICENSE](LICENSE) para más detalles.
 
-Si tienes preguntas sobre la implementación, contacta a la comunidad Tecnolíderes.
+---
+
+## Contacto
+
+- **Sitio web:** [solhecoo.github.io/tecnolideres-landing](https://solhecoo.github.io/tecnolideres-landing/)
+- **Issues:** [github.com/solhecoo/tecnolideres-landing/issues](https://github.com/solhecoo/tecnolideres-landing/issues)
 
 ---
 
