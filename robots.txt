@@ -1,0 +1,6 @@
+# Tecnolíderes - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://solhecoo.github.io/tecnolideres-landing/sitemap.xml
