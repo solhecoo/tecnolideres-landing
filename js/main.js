@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function animateCounters() {
         counters.forEach(counter => {
             const target = parseInt(counter.getAttribute('data-target'));
+            const suffix = counter.getAttribute('data-suffix') || '';
             const duration = 2000; // 2 seconds
             const increment = target / (duration / 16); // 60fps
             let current = 0;
@@ -106,10 +107,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const updateCounter = () => {
                 current += increment;
                 if (current < target) {
-                    counter.textContent = Math.ceil(current);
+                    counter.textContent = Math.ceil(current) + suffix;
                     requestAnimationFrame(updateCounter);
                 } else {
-                    counter.textContent = target;
+                    counter.textContent = target + suffix;
                 }
             };
 
